@@ -1,4 +1,4 @@
-package com.example.portfolio_demo.global.design.aop;
+package com.example.portfolio_demo.global.design.proxy.aop;
 
 import com.example.portfolio_demo.global.design.proxy.Html;
 import com.example.portfolio_demo.global.design.proxy.IBrowser;

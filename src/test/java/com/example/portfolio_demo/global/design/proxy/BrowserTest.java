@@ -1,12 +1,10 @@
 package com.example.portfolio_demo.global.design.proxy;
 
-import com.example.portfolio_demo.global.design.aop.AopBrowser;
+import com.example.portfolio_demo.global.design.proxy.aop.AopBrowser;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 import java.util.concurrent.atomic.AtomicLong;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 @SpringBootTest
 class BrowserTest {
