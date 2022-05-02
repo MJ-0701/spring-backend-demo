@@ -115,4 +115,12 @@ JSON을 사용하는 규칙은 snake_case 와 kamelCase 가 있는데 둘다 파
         System.out.println(userRequestDTO);
     }
 
+    // PUT API
+    @PutMapping("/put/{userId}")
+    public UserRequestDTO put(@RequestBody UserRequestDTO userRequestDTO, @PathVariable Long userId){
+        System.out.println(userId);
+        return userRequestDTO;
+
+    }
+
 }

@@ -1,9 +1,14 @@
 package com.example.portfolio_demo.global.domain.dto.req;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.databind.PropertyNamingStrategy;
+import com.fasterxml.jackson.databind.annotation.JsonNaming;
 import lombok.Data;
 
+import java.util.List;
+
 @Data
+@JsonNaming(value = PropertyNamingStrategy.SnakeCaseStrategy.class) // 클래스단위로 설정 가능
 public class UserRequestDTO {
 
     private String account;
@@ -23,4 +28,28 @@ public class UserRequestDTO {
 
     @JsonProperty("OTP")
     private String OTP;
+
+    /*
+{
+    "car_list" : [
+            {
+                "name" : "",
+                "car_number" : ""
+            },
+            {
+                "name" : "",
+                "car_number" : ""
+            }
+
+       ]
+}
+
+
+    */
+
+    private List<CarDTO> carList;
+
+
+
+
 }
