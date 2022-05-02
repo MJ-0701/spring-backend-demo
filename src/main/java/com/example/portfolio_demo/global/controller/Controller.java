@@ -123,4 +123,13 @@ JSON을 사용하는 규칙은 snake_case 와 kamelCase 가 있는데 둘다 파
 
     }
 
+    // DELETE API
+    @DeleteMapping("/delete/{userId}")
+    public void delete(@PathVariable String userId, @RequestParam String account){
+        System.out.println(userId);
+        System.out.println(account);
+    }
+
+
+
 }
