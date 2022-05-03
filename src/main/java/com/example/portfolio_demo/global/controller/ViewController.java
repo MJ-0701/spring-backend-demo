@@ -20,7 +20,7 @@ public class ViewController {
     // ResponseBody
     @ResponseBody
     @GetMapping("/user")
-    public UserRequestDTO userRequest(){ // 실제로 이런식으로 사용하진 않음 알고만 있을것. 
+    public UserRequestDTO userRequest(){ // 실제로 이런식으로 사용하진 않음 알고만 있을것.
         var userRequestDTO = new UserRequestDTO(); // 자바 11버전 타입추론
 
         userRequestDTO.setName("jack");

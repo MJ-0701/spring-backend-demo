@@ -5,10 +5,12 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.databind.PropertyNamingStrategy;
 import com.fasterxml.jackson.databind.annotation.JsonNaming;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.util.List;
 
 @Data
+@NoArgsConstructor
 @JsonNaming(value = PropertyNamingStrategy.SnakeCaseStrategy.class) // 클래스단위로 설정 가능
 @JsonInclude(JsonInclude.Include.NON_NULL) // Null 값 제외
 public class UserRequestDTO {
@@ -50,6 +52,13 @@ public class UserRequestDTO {
     */
 
     private List<CarDTO> carList;
+
+
+    public UserRequestDTO(String name, int age, String phoneNumber){
+        this.name = name;
+        this.age = age;
+        this.phoneNumber = phoneNumber;
+    }
 
 
 
