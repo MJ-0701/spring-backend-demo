@@ -1,6 +1,8 @@
 package com.example.portfolio_demo.global.controller;
 
 import com.example.portfolio_demo.global.domain.dto.req.UserRequestDTO;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.Map;
@@ -128,6 +130,32 @@ JSON을 사용하는 규칙은 snake_case 와 kamelCase 가 있는데 둘다 파
     public void delete(@PathVariable String userId, @RequestParam String account){
         System.out.println(userId);
         System.out.println(account);
+    }
+
+    // Response
+
+    @GetMapping("/text") // text 형태
+    public String text(@RequestParam String account){
+
+        return account;
+    }
+
+    // req -> object mapper -> object -> method -> object -> object mapper -> json -> response
+    @PostMapping("/json") // json 형태
+    public UserRequestDTO json(@RequestBody UserRequestDTO userRequestDTO){
+        // name, age, phoneNumber, address
+
+        return userRequestDTO; // 200 ok
+    }
+
+
+    // ResponseEntity
+    @PutMapping("/put-mapping")
+    public ResponseEntity<UserRequestDTO> putMapping(@RequestBody UserRequestDTO userRequestDTO){
+
+        //응답에 대한 커스터 마이징이 필요할떄 사용되는데 현업에서 사용하는 방식.
+        return ResponseEntity.status(HttpStatus.CREATED).body(userRequestDTO); // 201 OK
+
     }
 
 
