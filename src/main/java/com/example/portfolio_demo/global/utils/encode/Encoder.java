@@ -1,5 +1,8 @@
 package com.example.portfolio_demo.global.utils.encode;
 
+import org.springframework.stereotype.Component;
+
+
 public class Encoder {
 
     private IEncoder iEncoder;
@@ -11,6 +14,10 @@ public class Encoder {
     }*/
 
     public Encoder(IEncoder iEncoder){
+        this.iEncoder = iEncoder;
+    }
+
+    public void setIEncoder(IEncoder iEncoder){
         this.iEncoder = iEncoder;
     }
 
