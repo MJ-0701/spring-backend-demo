@@ -14,7 +14,7 @@ public class PortfolioDemoApplication {
 
     public static void main(String[] args) {
         SpringApplication.run(PortfolioDemoApplication.class, args);
-        System.out.println(Base64.getEncoder().encodeToString("jack2718@naver.com".getBytes()));
+//        System.out.println(Base64.getEncoder().encodeToString("jack2718@naver.com".getBytes()));
 
 
     }
