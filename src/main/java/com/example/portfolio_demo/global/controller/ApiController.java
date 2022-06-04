@@ -56,7 +56,7 @@ public class ApiController {
         return userDTO;
     }
 
-    @ExceptionHandler(value = MethodArgumentNotValidException.class) // 주석 추가용
+    @ExceptionHandler(value = MethodArgumentNotValidException.class) // 커밋 테스트
     public ResponseEntity methodArgumentNotValidException(MethodArgumentNotValidException e){
         System.out.println("api controller"); // 컨트롤러가 우선순위 인것을 확인.
         return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(e.getMessage());
